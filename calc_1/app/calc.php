@@ -2,21 +2,21 @@
 
 $x = $_REQUEST ['x'];
 $y = $_REQUEST ['y'];
+$operation = $_REQUEST['operation'];
 
 $result = null;
 $messages = array();
 
-$operation = $_REQUEST['operation'];
-
-if ( ! (isset($x) && isset($y) && isset($operation))) {
-    $messages = "Błędne wywołanie. Brak parametrów.";
+if ( !isset($x,$y,$operation)) {
+        $messages [] = 'Błędne wywołanie. Brak parametrów.';
 }
 
 if ( $x == "") {
-	$messages [] = 'Nie podano liczby 1';
+	$messages []= 'Nie podano liczby 1';
 }
+
 if ( $y == "") {
-	$messages [] = 'Nie podano liczby 2';
+	$messages []= 'Nie podano liczby 2';
 }
 
 if (empty( $messages )) {

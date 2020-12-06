@@ -30,5 +30,25 @@
            
             <input type="submit" value="Oblicz">
         </form>
+        
+        <?php
+            
+            if(is_array($messages)){
+                
+                if(!empty($messages)){
+                    
+                    echo '<ol>';
+
+                    foreach ($messages as $msg) {
+                        echo '<li>'.$msg.'</li>';
+                    } 
+                    
+                    echo '</ol>';
+                    
+                }
+                
+            }
+        
+        ?>
     </body>
 </html>
