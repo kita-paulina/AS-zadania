@@ -33,6 +33,11 @@
         
         <?php
             
+            if(isset($result)){
+                
+                echo '<br>Wynik : '.$result;
+            }
+        
             if(is_array($messages)){
                 
                 if(!empty($messages)){
