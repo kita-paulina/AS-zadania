@@ -35,6 +35,11 @@
             
             if(is_array($messages)){
                 
+                if(isset($result)){
+                
+                echo '<br>Wynik : '.$result;
+            }
+                
                 if(!empty($messages)){
                     
                     echo '<ol>';
